@@ -51,7 +51,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'bail|required|string|alpha_num|max:50|unique:users',
-            'shop_ref' => 'bail|required|string|alpha_num|max:100|exists:registered_shops,ref_id',
+            'shop_ref' => 'bail|required|string|alpha_num|max:100|unique:registered_shops,ref_id',
             'email' => 'bail|required|string|email|max:100|unique:users',
             'password' => 'bail|required|string|min:6|confirmed',
         ]);

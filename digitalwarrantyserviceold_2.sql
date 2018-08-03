@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Aug 04, 2018 at 12:52 AM
--- Server version: 5.7.22-22
--- PHP Version: 5.6.30
+-- Host: 127.0.0.1
+-- Generation Time: Aug 02, 2018 at 05:56 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mehedees_digitalwarrantyservice`
+-- Database: `digitalwarrantyservice`
 --
 
 -- --------------------------------------------------------
@@ -154,7 +154,7 @@ INSERT INTO `users` (`id`, `name`, `shop_name`, `email`, `password`, `remember_t
 (1, 'test', 'testShop', 'mehedees@live.com', '$2y$10$V1gIQt0/b2O8EAupZGdWKeGhpAVtckn7S2RzSsF/tNwCn.26jZyRW', 'CUrc3D6KeTmyfInNCKnsKUPOAaEED5wYNW3iAnrEVeamElYOOU70YPwXA1Wd', '2018-07-30 14:12:14', '2018-07-30 14:12:14'),
 (2, 'shop1', 'testShop', 'a@b.c', '$2y$10$mVyMn3m/9YaCAMxESycIdOxeGKn7xIkz8kftXB2AEmy3Alz67mC8m', 'uOFrBchRpfUifWzRhGbA50rbPwLdjO6TRUz1sz9FTJP7Pb48L4BWjqRTYYcG', '2018-08-01 20:51:47', '2018-08-01 20:51:47'),
 (3, 'shop2', 'testShop2', 'b@c.d', '$2y$10$tgbYGi0lZlnE1j/lI6EOUuU5lZVfUpWG.HUMXlOuM8zhhdDyhrKyS', 'JLRW6L4HKy6kZp3h0vxvelDmuKyI5BzF4qRiw2psTyQL7X5JHEYwA7FXYQef', '2018-08-01 20:57:30', '2018-08-01 20:57:30'),
-(4, 'smk', 'testShop', 'c@d.e', '$2y$10$LamHtc44rs5Ez7fpNut4E.FUKTXWKSZ2CgeLD25T01wEmjX3PT2AK', 'LWiTwKgWmELBmk6L3FxJMiV8n5arrKBGI5P3QiPgj0wW5Xxx8qo7cVP6TEtH', '2018-08-02 15:30:05', '2018-08-02 15:30:05');
+(4, 'smk', 'testShop', 'c@d.e', '$2y$10$LamHtc44rs5Ez7fpNut4E.FUKTXWKSZ2CgeLD25T01wEmjX3PT2AK', 'V2QtP3t7ipjik1TwITcmhNOxZkpr4cm3KL5bm0kJeUEMbTCL08e4MiO8shu5', '2018-08-02 15:30:05', '2018-08-02 15:30:05');
 
 --
 -- Indexes for dumped tables
@@ -186,7 +186,6 @@ ALTER TABLE `product_details`
 --
 ALTER TABLE `registered_shops`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `ref_id` (`ref_id`),
   ADD KEY `shop_name` (`shop_name`);
 
 --
